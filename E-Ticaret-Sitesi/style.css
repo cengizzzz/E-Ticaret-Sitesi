@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* Bu giriş sayfası tamamen www.weblebi.net tarafından kodlanmıştır. */
+
+html, body {height: 100%;}
+body{margin:0; padding:0; background-color:#D2D2D2}
+#ortalaAlan {
+   width: 486px;
+   height: 298px;
+   background-image:url(images/content-bg.png);
+   background-repeat:no-repeat;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -245px;
+   margin-top: -150px;
+}
+#ust {
+	width:473px;
+	height:63px;
+	background-image:url(images/ust.png);
+	margin-left:6px;
+	margin-top:10px;
+}
+#bilgilerDis {
+	width:393px;
+	height:117px;
+	background-image:url(images/alan-bg.png);
+	margin-top:20px;
+	margin-left:0px;
+}
+#bilgilerIc {
+	padding-top:20px;
+	width:380px;
+	height:70px;
+	margin:20px auto;
+	font-family:Calibri, verdana, "Times New Roman";
+	font-weight:bold;
+	white-space:pre;
+}
+input[type=text] {
+width: 257px;
+height:25px;
+background-image:url(images/alan.png);
+border:none;
+font-family:Verdana, Geneva, sans-serif;
+font-weight:bold;
+} 
+input[type=password] {
+	margin-top:10px;
+width: 257px;
+height:25px;
+background-image:url(images/alan.png);
+border:none;
+} 
+input[type=button] {
+width: 104px;
+height:32px;
+background-image:url(images/giris.png);
+border:none;
+}
+#button {
+	margin-top:20px;
+	margin-left:290px;
+width: 104px;
+height:32px;}
+#imza {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:43px;
+	font-family:Calibri, verdana, "Times New Roman";
+	color:#999;
+	text-align:center;
+}
+#imza a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#999;
+}

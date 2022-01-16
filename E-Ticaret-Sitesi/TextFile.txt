@@ -1,0 +1,12 @@
+<div class="templatemo_section_2">
+            <img src="images/templatemo_image_01.jpg" alt="image" />
+            <h4>
+                Mauris quis nulla</h4>
+            <p>
+                Suspendisse potenti. Ut sed pede. Nullam vitae tellus. Sed ultrices. Lorem ipsum
+                dolor sit amet, consectetuer adipiscing elit. Curabitur velit tellus,</p>
+            <div class="price">
+                PRICE:<span> $1,234,000</span></div>
+            <div class="readmore">
+                <a href="#">Read more</a></div>
+        </div>

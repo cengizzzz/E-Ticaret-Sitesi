@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Emlak.master.cs" Inherits="Emlak" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="gallery_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="templatemo_container">
+            <div>
+                <div id="templatemo_top_panel">
+                    <div id="templatemo_header_section">
+                        <div id="templatemo_header">
+                            Cengiz Emlak
+                        </div>
+                    </div>
+                    <div style="float: right; width: 448px; height: 57px;">
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                &nbsp; &nbsp; &nbsp; &nbsp; <a href="kaydol.aspx" style="display: inline; color: White;
+                                    font-size: medium; text-decoration: none; float: right; margin-left: 20px;">Kaydol</a>
+                                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<a href="login.aspx" style="display: inline;
+                                    color: White; font-size: medium; text-decoration: none; float: right;">Giriş</a>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>  
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    class="logoutText" style ="font-size :medium ; ">Merhaba 
+                                    <asp:LoginName runat="server" Font-Size="Medium" ID="LoginName1" /><a href="bilgi.aspx" style="display: inline;
+                                    color: White; font-size: medium; text-decoration: none; float: right;">Hesabım</a>
+                                    &nbsp;|&nbsp;
+                                    <asp:LoginStatus runat="server" ID="LoginStatus1" LogoutText="Çıkış" Font-Size ="Medium"  ForeColor="white" LogoutAction="RedirectToLoginPage" />
+                                </span>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            <!-- end of header section -->
+            <div id="templatemo_menu_login_section">
+                <div id="templatemo_menu_section" style="width: 730px; height: 36px">
+                    <div id="templatemo_menu_panel">
+                        <ul style="float: left; margin: 20px; width: 878px; height: 63px;">
+                            <li><a href="anasayfa.aspx" style="font-size: medium; width: 150px; height: 41px;"
+                                class="current">ANASAYFA &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+                            <li><a href="Tumevler.aspx" style="font-size: medium; width: 150px; height: 42px;">EVLER
+                                &nbsp;&nbsp; </a></li>
+                            <li><a href="hakkında.aspx" style="font-size: medium; width: 150px; height: 42px;">&nbsp;&nbsp;
+                                HAKKINDA &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </a>
+                                <asp:LoginView ID="LoginView2" runat="server">
+                                    <LoggedInTemplate>
+                                        <a href="İletisim.aspx" style="display: inline; font-size: medium;">İLETİŞİM</a>&nbsp
+                                        &nbsp; <a href="evsatınal.aspx" style="display: inline; font-size: medium;">RANDEVU</a>
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of menu -->
+                </div>
+            </div>
+            <!-- end of menu login section -->
+            <!-- end of top panel -->
+            &nbsp;
+            <div id="templatemo_gallery_panel">
+                <div id="gallery">
+                    <div id="imagearea">
+                        <div id="image">
+                            <a href="javascript:slideShow.nav(-1)" class="imgnav " id="previmg" style="left: 0px;
+                                top: 0px"></a><a href="javascript:slideShow.nav(1)" class="imgnav " id="nextimg"></a>
+                        </div>
+                    </div>
+                    <div id="thumbwrapper">
+                        <div id="thumbarea">
+                            <ul id="thumbs">
+                                <li value="2">
+                                    <img src="images/thumbs/2.jpg" width="179" height="100" alt="" /></li>
+                                <li value="3">
+                                    <img src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
+                                <li value="4">
+                                    <img src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
+                                <li value="5">
+                                    <img src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
+                                <li value="3">
+                                    <img src="images/thumbs/3.jpg" width="179" height="100" alt="" /></li>
+                                <li value="4">
+                                    <img src="images/thumbs/4.jpg" width="179" height="100" alt="" /></li>
+                                <li value="5">
+                                    <img src="images/thumbs/5.jpg" width="179" height="100" alt="" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+var imgid = 'image';
+var imgdir = 'images/fullsize';
+var imgext = '.jpg';
+var thumbid = 'thumbs';
+var auto = true;
+var autodelay = 5;
+                </script>
+
+                <script type="text/javascript" src="slide.js"></script>
+
+            </div>
+            <div id="templatemo_content_panel_2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="cleaner_with_height">
+                    &nbsp;</div>
+            </div>
+            <!-- end of content panel 2 -->
+            <div id="templatemo_content_panel_3">
+                <!-- end of news section 3-->
+               <div class="templatemo_section_3" style="width: 407px; height: 131px">
+                    <h2>
+                        BÖLGE SEÇİNİZ</h2>
+                    <asp:Repeater ID="Repeater1" runat="server" EnableTheming="True">
+                        <HeaderTemplate>
+                            <ul>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <li><a href='evler.aspx?ilce_id=<%# Eval ("ilce_id") %>'>
+                                <%# Eval ("ilce_isim") %>
+                            </a></li>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul></FooterTemplate>
+                    </asp:Repeater>
+                </div>
+                <div class="templatemo_section_3" style="width: 416px; height: 144px">
+                    <h2>
+                        KATEGORİ SEÇ</h2>
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <HeaderTemplate>
+                            <ul>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <li><a href='kategori.aspx?kategori_id=<%# Eval ("kategori_id") %>'>
+                                <%# Eval("kategori_isim")%>
+                            </a></li>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul></FooterTemplate>
+                    </asp:Repeater>
+                </div>
+                
+                &nbsp; &nbsp; &nbsp;
+                <div class="cleaner_with_height">
+                    &nbsp;</div>
+            </div>
+            <!-- end of content panel 3 -->
+            <div id="templatemo_footer_panel">
+                Yatırımızı Yastık Altına Degil Toprak Üstüne Yapın...</div>
+            <!-- end of container -->
+    </form>
+</body>
+</html>

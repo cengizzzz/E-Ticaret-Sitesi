@@ -1,0 +1,30 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using dsetTableAdapters;
+
+public partial class ADMİN_sillll : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Request.QueryString["mesaj_id"] != null)
+        {
+            int mesaj_id = int.Parse(Request.QueryString["mesaj_id"].ToString());
+            mesajTableAdapter a = new mesajTableAdapter();
+            a.Delete(mesaj_id);
+            Response.Redirect("iletisim.aspx");
+        }
+
+        else
+        {
+            Response.Redirect("iletisim.aspx");
+        } 
+    }
+}
